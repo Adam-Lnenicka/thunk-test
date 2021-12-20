@@ -15,11 +15,12 @@ function App() {
   return (
     <div>
       <p>hello</p>
-      {apiMoviesArray &&
-        apiMoviesArray.map((movie) =>
-          movie.map((m) => <Card key={m.id} gameName={m.title} />)
-        )}
-      {console.log(apiMoviesArray)}
+      <div>
+        {apiMoviesArray &&
+          apiMoviesArray.map((movie) =>
+            movie.map((m) => <Card key={m.id} gameName={m.title} />)
+          )}
+      </div>
       {/* <div> {apiMoviesArrayTest}hi</div> */}
     </div>
   );
