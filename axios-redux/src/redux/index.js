@@ -9,12 +9,12 @@ const initialState = {
 const LOAD_MOVIES = "LOAD_MOVIES";
 
 export const loadMovies = () => async (dispatch) => {
-  const apiLink = "https://www.mocky.io/v2/5da99f9f31000036004e0a4e";
+  const apiLink = "https://mocki.io/v1/1c6154ca-a4d2-49e5-ac35-8d5680ed367c";
   const apiData = await fetch(apiLink);
   const moviesData = await apiData.json();
   dispatch({
     type: LOAD_MOVIES,
-    payload: moviesData,
+    payload: moviesData.data,
   });
 };
 

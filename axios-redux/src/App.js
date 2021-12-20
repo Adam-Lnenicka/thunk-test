@@ -16,7 +16,9 @@ function App() {
     <div>
       <p>hello</p>
       {apiMoviesArray &&
-        apiMoviesArray.map((m) => <Card key={m.slug} gameName={m.gameName} />)}
+        apiMoviesArray.map((movie) =>
+          movie.map((m) => <Card key={m.id} gameName={m.title} />)
+        )}
       {console.log(apiMoviesArray)}
       {/* <div> {apiMoviesArrayTest}hi</div> */}
     </div>
